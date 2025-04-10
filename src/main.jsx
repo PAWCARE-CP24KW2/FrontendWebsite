@@ -6,7 +6,7 @@ import App from './App';
 import PetInformation from './pages/information-qr-code';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/kw2">
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/pet/:petId" element={<PetInformation />} />

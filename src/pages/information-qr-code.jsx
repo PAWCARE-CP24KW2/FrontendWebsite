@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import petplaceholder from '../assets/petplaceholder.png';
 
 const PetInformation = () => {
   const { petId } = useParams();
@@ -16,6 +17,10 @@ const PetInformation = () => {
     if (months < 0) {
       years -= 1;
       months += 12;
+    }
+
+    if (years === 0) {
+      return `${months} months`;
     }
 
     return `${years} years ${months} months`;
@@ -58,7 +63,11 @@ const PetInformation = () => {
     <div className='flex flex-col items-center justify-center h-screen bg-gray-100 font-comfortaa'>
 
         <div className='m-2'>
-            <img src={pet.profile_path} alt="profile" className='w-42 h-42 rounded-full border-3 border-[#71543F]' />
+          <img 
+            src={pet.profile_path || petplaceholder} 
+            alt="profile" 
+            className={`w-42 h-42 rounded-full ${pet.profile_path ? 'border-3 border-[#71543F]' : ''}`} 
+          />
         </div>
 
         <h1 className='text-3xl mt-2'> {pet.pet_name}</h1>
