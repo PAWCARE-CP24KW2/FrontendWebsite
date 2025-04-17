@@ -73,14 +73,14 @@ const PetInformation = () => {
         <h1 className='text-3xl mt-2'> {pet.pet_name}</h1>
 
         <div className='flex flex-col items-center justify-center mb-2'>
-          <p className='text-[#616161]'>Contact my owner pls!</p>
+          <p className='text-[#616161]'>Contact my owner please!</p>
           <p className='text-[#616161] text-xl'> {pet.owner_phone}</p>
         </div>
       
         <div className='bg-white shadow-lg rounded-lg p-6'>
           <div className='grid grid-cols-2 gap-6'>
             <div className='flex flex-col items-center justify-center'>
-              <p className='text-[#616161]'>Spacies</p>
+              <p className='text-[#616161]'>Species</p>
               <p className=''>{pet.pet_type}</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
